@@ -1,0 +1,11 @@
+C:\Users\jairm\Documents\Code\Empilhador\empilhador\bin\Debug\netcoreapp2.2\empilhador.deps.json
+C:\Users\jairm\Documents\Code\Empilhador\empilhador\bin\Debug\netcoreapp2.2\empilhador.runtimeconfig.json
+C:\Users\jairm\Documents\Code\Empilhador\empilhador\bin\Debug\netcoreapp2.2\empilhador.runtimeconfig.dev.json
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\bin\Debug\netcoreapp2.2\empilhador.dll
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\bin\Debug\netcoreapp2.2\empilhador.pdb
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.csprojAssemblyReference.cache
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.csproj.CoreCompileInputs.cache
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.AssemblyInfoInputs.cache
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.AssemblyInfo.cs
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.dll
+c:\Users\jairm\Documents\Code\Empilhador\empilhador\obj\Debug\netcoreapp2.2\empilhador.pdb
