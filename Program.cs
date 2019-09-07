@@ -25,6 +25,7 @@ namespace empilhador
                 var ws = p.Workbook.Worksheets["Config"];
 
                 // Armazena os nomes de campos em listas
+                cf.LNomeCampo.Add("Base");
                 while (!(ws.Cells[1, coluna].Value == null))
                 {
                     cf.LNomeCampo.Add(ws.Cells[1, coluna].Value.ToString());
@@ -65,7 +66,7 @@ namespace empilhador
                 List<int> sublista = null;
 
                 var wssaida = p.Workbook.Worksheets.Add("Saida");
-                
+
                 //Escreve o nome das colunas no arquivo de saída
                 foreach (var item in cf.LNomeCampo)
                 {
@@ -86,15 +87,17 @@ namespace empilhador
 
                         while (!(wsbase.Cells[linha, coluna].Value == null))
                         {
-                            for (int j = 0; j < cf.LParametros.Count; j++)
+                            sublista = cf.LParametros[i];
+                            for (int j = 0; j < sublista.Count; j++)
                             {
                                 wssaida.Cells[linhaSaida, 1].Value = cf.LNomeBase[i];
-                                sublista = cf.LParametros[i];
-                                wssaida.Cells[linhaSaida, j + 1].Value = wsbase.Cells[linha, sublista[j]].Value;
+                                wssaida.Cells[linhaSaida, j + 2].Value = wsbase.Cells[linha, sublista[j]].Value;
+
                             }
 
                             linha++;
                             linhaSaida++;
+
                         }
 
                     }
