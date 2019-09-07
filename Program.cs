@@ -13,6 +13,7 @@ namespace empilhador
 
             int linha = 2;
             int coluna = 7;
+            int indexCampo = 0;
             string pathArquivoConfig = Directory.GetCurrentDirectory() + @"\Arquivos\Config.xlsx";
             string pathSaida = Directory.GetCurrentDirectory() + @"\Arquivos\Saida.xlsx";
             var fi = new FileInfo(pathArquivoConfig);
@@ -33,7 +34,7 @@ namespace empilhador
                 }
 
                 // Armazena os parâmetros em listas
-                while (!(ws.Cells[linha, 1].Value == null))
+                 while (!(ws.Cells[linha, 1].Value == null))
                 {
                     coluna = 7;
                     cf.LNomeBase.Add(ws.Cells[linha, 1].Value.ToString());
@@ -47,8 +48,16 @@ namespace empilhador
 
                     for (int i = 0; i < cf.LNomeCampo.Count; i++)
                     {
-                        if (ws.Cells[linha, coluna].Value == null) break;
-                        cf.LParametros[cf.LParametros.Count - 1].Add(Int32.Parse(ws.Cells[linha, coluna].Value.ToString()));
+                        if (ws.Cells[linha, coluna].Value == null) 
+                        {
+                            indexCampo = 99;
+                        }
+                        else
+                        {
+                            indexCampo = Int32.Parse(ws.Cells[linha, coluna].Value.ToString());
+                        }
+
+                        cf.LParametros[cf.LParametros.Count - 1].Add(indexCampo);
                         coluna++;
                     }
 
