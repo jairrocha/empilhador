@@ -50,7 +50,7 @@ namespace empilhador
                     {
                         if (ws.Cells[linha, coluna].Value == null) 
                         {
-                            indexCampo = 99;
+                            indexCampo = 0;
                         }
                         else
                         {
@@ -100,13 +100,14 @@ namespace empilhador
                             for (int j = 0; j < sublista.Count; j++)
                             {
                                 wssaida.Cells[linhaSaida, 1].Value = cf.LNomeBase[i];
-                                wssaida.Cells[linhaSaida, j + 2].Value = wsbase.Cells[linha, sublista[j]].Value;
-
+                                if (sublista[j]!=0)
+                                {
+                                    wssaida.Cells[linhaSaida, j + 2].Value = wsbase.Cells[linha, sublista[j]].Value;
+                                }
+                                
                             }
-
                             linha++;
                             linhaSaida++;
-
                         }
 
                     }
